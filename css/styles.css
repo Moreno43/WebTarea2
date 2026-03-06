@@ -1,0 +1,194 @@
+:root {
+    --red: #BC002D;
+    --beige: #f5efe6;
+    --dark: #1C1C1C;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--beige);
+    color: var(--dark);
+}
+
+/* ================= HEADER ================= */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    background: white;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    z-index: 1000;
+}
+
+.logo span {
+    font-weight: bold;
+}
+
+.nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: var(--dark);
+}
+
+.nav a:hover {
+    color: var(--red);
+    border-bottom: 2px solid var(--red);
+}
+
+/* ================= LANGUAGE ================= */
+
+.language {
+    position: relative;
+}
+
+#langBtn {
+    background: var(--red);
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 45px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    z-index: 2000;
+}
+
+.dropdown div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+.dropdown div:hover {
+    background: #f4f4f4;
+}
+
+.dropdown.show {
+    display: block;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+    position: relative;
+    z-index: 1;
+    background: url('../assets/banner.png');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    padding-left: 80px;
+    color: white;
+}
+
+/* Overlay oscuro */
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* ================= BUTTON ================= */
+
+.btn {
+    background: var(--red);
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* ================= CONTENT SECTIONS ================= */
+
+.content-section {
+    padding: 60px 80px;
+    background: white;
+    margin-bottom: 10px;
+}
+
+.content-section.alt {
+    background: var(--beige);
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.content img {
+    width: 250px;
+    border-radius: 8px;
+}
+
+.content h2 {
+    margin-bottom: 15px;
+    color: var(--dark);
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: white;
+    border-top: 1px solid #ddd;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+    .content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero {
+        padding-left: 20px;
+    }
+
+    .header {
+        flex-direction: column;
+        gap: 15px;
+    }
+}

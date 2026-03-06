@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descubriendo Japón</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <span data-i18n="siteTitle">Descubriendo Japón</span> 🌸
+        </div>
+
+        <nav class="nav">
+            <a href="#" data-i18n="navHome">Inicio</a>
+            <a href="#" data-i18n="navGastronomy">Gastronomía</a>
+            <a href="#" data-i18n="navFestivals">Festivales</a>
+            <a href="#" data-i18n="navTourism">Lugares Turísticos</a>
+        </nav>
+
+        <div class="language">
+            <button id="langBtn">ES</button>
+            <div class="dropdown" id="langMenu">
+                <div data-lang="es">🇪🇸 Español</div>
+                <div data-lang="en">🇺🇸 English</div>
+                <div data-lang="jp">🇯🇵 日本語</div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1 data-i18n="heroTitle">Explora la tradición y modernidad de Japón</h1>
+            <button class="btn" data-i18n="heroBtn">Ver más</button>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="content">
+            <img src="/assets/ramen.jpg" alt="">
+            <div>
+                <h2 data-i18n="gasTitle">Gastronomía</h2>
+                <p data-i18n="gasText">Sabores de Japón que combinan tradición y presentación artística.</p>
+                <button class="btn" data-i18n="gasBtn">Descubrir más</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section alt">
+        <div class="content">
+            <img src="/assets/festivalCerezos.jpg" alt="">
+            <div>
+                <h2 data-i18n="festTitle">Festivales</h2>
+                <p data-i18n="festText">Fiestas tradicionales llenas de cultura y color.</p>
+                <button class="btn" data-i18n="festBtn">Explorar</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="content">
+            <img src="/assets/hokkaido.jpg" alt="">
+            <div>
+                <h2 data-i18n="tourTitle">Lugares Turísticos</h2>
+                <p data-i18n="tourText">Descubre el Monte Fuji, Kioto y Tokio.</p>
+                <button class="btn" data-i18n="tourBtn">Ver destinos</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <span data-i18n="footerText">© 2026 - Juan Pablo Moreno López</span>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
